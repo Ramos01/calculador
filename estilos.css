@@ -1,0 +1,190 @@
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Contenedor principal centrado */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* Botones de selección */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+button.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.toggle-btn.active {
+  background-color: #7c4dff;
+  box-shadow: 0 0 10px #cbbaff;
+}
+
+.fondo-recibo button.toggle-btn.active {
+  background-color: #f4c542;
+  box-shadow: 0 0 10px #f4c54288;
+}
+
+button.toggle-btn:hover:not(.active) {
+  background-color: #3399ff;
+}
+
+/* Formularios */
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Área del logo */
+.logo-area {
+  margin: 20px 0;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: none;
+  margin: 0 auto;
+}
+
+.logo.visible {
+  display: block;
+}
+
+
+/* Botón calcular */
+button.calc-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.calc-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Resultados */
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.result span {
+  font-weight: bold;
+}
+
+/* Total destacado */
+#totalEnvio,
+#totalRecibo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #d6336c;
+  background-color: #fff0f5;
+  padding: 14px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(214, 51, 108, 0.3);
+}
+
+/* Fondos identificativos */
+.fondo-yape {
+  background-color: #f3e8ff; /* morado suave */
+}
+
+.fondo-recibo {
+  background-color: #fffbe6; /* amarillo claro */
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  button.toggle-btn {
+    margin-bottom: 10px;
+  }
+
+  input,
+  button.calc-btn {
+    font-size: 1rem;
+  }
+
+  #totalEnvio,
+  #totalRecibo {
+    font-size: 1.7rem;
+  }
+}
